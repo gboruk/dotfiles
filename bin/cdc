@@ -1,0 +1,4 @@
+if [ "$1" != "" ];
+  then cd $BASE_DIR/*/$1
+else cd $BASE_DIR
+fi

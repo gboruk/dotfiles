@@ -1,0 +1,4 @@
+#!/bin/ksh
+vi ~/env_scripts/.env_settings
+. ~/env_scripts/.env_settings
+. ./.profile
