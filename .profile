@@ -19,13 +19,11 @@ alias cdc='. /Users/gboruk/bin/go_to_controller_dir'
 alias cdv='. /Users/gboruk/bin/go_to_view_dir'
 alias cdt='cd $BASE_DIR/test'
 alias cdi='cd $BASE_IPHONE_DIR'
-alias dev='ssh labs.mygrocerybuddy.com'
 alias depo='cd ~/Dev*/depot/'
 alias doc='cd ~/Dropbox/Documents/'
 alias gs='git status'
-alias serv='ruby script/server'
-alias tserv='ruby script/server -p 3001 -e test'
-alias sinc='/Applications/synergy-1.3.1/synergyc -f MGB-ION.local'
+alias serv='rails s'
+alias tserv='rails s -p 3001 -e test'
 alias unlockmdb='sudo rm -rf /usr/local/mongodb_data/mongod.lock'
 alias deploy='. /Users/gboruk/bin/_deploy'
 alias release_notes='git log --pretty=%s'
@@ -40,3 +38,4 @@ alias rcov_test='rake test:test:rcov SHOW_ONLY="app"'
 # Setting the path for MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export SHELL_SESSION_HISTORY=0

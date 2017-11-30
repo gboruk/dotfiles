@@ -1,3 +1,9 @@
 cdd
+SECONDS=0
 git push mango master;
+duration=$SECONDS
+echo "deployment completed in $(($duration % 60)) seconds."
+SECONDS=0
 git push production master;
+duration=$SECONDS
+echo "deployment completed in $(($duration % 60)) seconds."
