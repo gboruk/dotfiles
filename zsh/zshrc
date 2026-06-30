@@ -1,0 +1,17 @@
+export PATH="$HOME/.local/bin:$PATH"
+export DEV_DIR="$HOME/Dev/"
+
+# ── History ────────────────────────────────────────────────
+HISTSIZE=50000
+SAVEHIST=50000
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_DUPS
+
+# ── Auto-start tmux in interactive terminals ──────────────
+# Give each new terminal window its own tmux session.
+# Guards: interactive shell, not already inside tmux, and tmux is installed.
+if [[ $- == *i* ]] && [[ -z "$TMUX" ]] && command -v tmux >/dev/null 2>&1; then
+  exec tmux new-session
+fi
+
+[ -f "$HOME/Dev/dotfiles/zsh/aliases.zsh" ] && source "$HOME/Dev/dotfiles/zsh/aliases.zsh"

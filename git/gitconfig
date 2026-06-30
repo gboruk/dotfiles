@@ -1,0 +1,23 @@
+[include]
+    path = ~/.gitconfig.local
+[init]
+    defaultBranch = main
+[pull]
+    rebase = true
+[push]
+    autoSetupRemote = true
+[fetch]
+    prune = true
+[color]
+    ui = auto
+[core]
+    excludesfile = ~/.config/git/ignore
+[alias]
+    co = checkout
+    br = branch
+    st = status -sb
+    last = log -1 HEAD
+    unstage = reset HEAD --
+    contains = branch --contains
+    release-notes = log --pretty=%s
+    lg = log --graph --oneline --decorate
