@@ -1,6 +1,9 @@
 export PATH="$HOME/.local/bin:$PATH"
 export DEV_DIR="$HOME/Dev/"
 
+#enable vi on terminal
+set -o vi
+
 # ── History ────────────────────────────────────────────────
 HISTSIZE=50000
 SAVEHIST=50000
@@ -15,3 +18,8 @@ if [[ $- == *i* ]] && [[ -z "$TMUX" ]] && command -v tmux >/dev/null 2>&1; then
 fi
 
 [ -f "$HOME/Dev/dotfiles/zsh/aliases.zsh" ] && source "$HOME/Dev/dotfiles/zsh/aliases.zsh"
+
+# ── Local overrides (untracked, outside the repo) ─────────
+# Personal/machine/project-specific aliases and settings.
+# Sourced last so it can override anything above.
+[ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"

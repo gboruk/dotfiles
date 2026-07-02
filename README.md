@@ -38,6 +38,13 @@ repo or `install.sh`.
 `zsh/aliases.zsh` is sourced directly from `~/Dev/dotfiles` by `zshrc` — it isn't symlinked
 separately.
 
+## Local overrides
+
+`zshrc` sources `~/.zshrc.local` last (if it exists) — an untracked file outside the repo for
+personal, machine-, or project-specific aliases and settings. It isn't created by `install.sh`;
+just drop one in. Because it's sourced after everything else, it can override any alias or setting
+above it. This mirrors `~/.gitconfig.local`, which git already includes for identity.
+
 ## Aliases & functions
 
 | Name | Does |

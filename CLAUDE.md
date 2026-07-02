@@ -17,6 +17,7 @@ It never reads, snapshots, or blends an existing setup — running it installs *
 
 - **To add a managed file, add it to the `LINKS` array in `install.sh`** (`"repo/path:$HOME/target"`), not just to the repo. Existence in the repo alone does nothing.
 - `zsh/aliases.zsh` is the deliberate exception: it is **sourced directly** from `~/Dev/dotfiles/zsh/aliases.zsh` by `zsh/zshrc`, not symlinked. Editing it takes effect on next shell/`reload` with no install step. (This also hardcodes the `~/Dev/dotfiles` path — moving the repo breaks the source line.)
+- `zsh/zshrc` also sources `~/.zshrc.local` last — an untracked, outside-the-repo file for personal/machine/project-specific overrides (mirrors the `~/.gitconfig.local` pattern). It's not scaffolded by `install.sh`; absence is fine. Keep such overrides there, not in the tracked `aliases.zsh`/`zshrc`.
 
 ## Identity separation — do not hardcode git identity
 
